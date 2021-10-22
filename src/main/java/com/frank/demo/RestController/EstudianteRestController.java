@@ -26,8 +26,6 @@ public class EstudianteRestController {
         return new Estudiante(1, "francisco", "granados");
     }
 
-    
-    
     @GetMapping("/Estudiantes")
     public List<Estudiante> obtentenEstudiante() {
         List<Estudiante> estudiantes = new ArrayList<>();
