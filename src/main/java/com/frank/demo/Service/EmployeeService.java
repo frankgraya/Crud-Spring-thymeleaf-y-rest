@@ -13,12 +13,12 @@ import java.util.List;
  */
 public interface EmployeeService {
 
-    List<Employee> getAllEmpleados();
+    public Employee saveEmployee(Employee employee);
 
-    void saveEmployee(Employee employee);
+    public void delete(long id);
 
-    Employee getEmployeeById(long id);
+    public Employee findById(long id);
 
-    void deleteEmployeeById(long id);
+    public List<Employee> findAll();
 
 }

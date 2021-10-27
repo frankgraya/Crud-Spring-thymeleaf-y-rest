@@ -20,20 +20,19 @@ public class EmployeeServiceImpl implements EmployeeService {
     private EmployeeRepository employeeRepository;
 
     @Override
-    public List<Employee> getAllEmpleados() {
-        log.info("Se Listo getAllEmpleados con exito ");
-        return employeeRepository.findAll();
+    public Employee saveEmployee(Employee employee) {
+        log.info("Se guardo saveEmployee con exito ");
+        return employeeRepository.save(employee);
     }
 
     @Override
-    public void saveEmployee(Employee employee) {
-        log.info("Se guaro saveEmployee con exito ");
-        this.employeeRepository.save(employee);
+    public void delete(long id) {
+        employeeRepository.deleteById(id);
     }
 
     @Override
-    public Employee getEmployeeById(long id) {
-        Optional< Employee> optional = employeeRepository.findById(id);
+    public Employee findById(long id) {
+        Optional<Employee> optional = employeeRepository.findById(id);
         Employee employee = null;
         if (optional.isPresent()) {
             employee = optional.get();
@@ -44,8 +43,8 @@ public class EmployeeServiceImpl implements EmployeeService {
     }
 
     @Override
-    public void deleteEmployeeById(long id) {
-        this.employeeRepository.deleteById(id);
+    public List<Employee> findAll() {
+        return (List<Employee>) employeeRepository.findAll();
     }
 
 }

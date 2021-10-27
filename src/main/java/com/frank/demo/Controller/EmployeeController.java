@@ -26,7 +26,7 @@ public class EmployeeController {
 
     @GetMapping("/")
     public String viewHomePage(Model model) {
-        model.addAttribute("listEmployees", employeeService.getAllEmpleados());
+        model.addAttribute("listEmployees", employeeService.findAll());
         return "index";
     }
 
@@ -48,7 +48,7 @@ public class EmployeeController {
     public String showFormForUpdate(@PathVariable(value = "id") long id, Model model) {
 
         // get employee from the service
-        Employee employee = employeeService.getEmployeeById(id);
+        Employee employee = employeeService.findById(id);
 
         // set employee as a model attribute to pre-populate the form
         model.addAttribute("employee", employee);
@@ -58,7 +58,7 @@ public class EmployeeController {
     @GetMapping("/deleteEmployee/{id}")
     public String deleteEmployee(@PathVariable(value = "id") long id) {
         // call delete employee method 
-        this.employeeService.deleteEmployeeById(id);
+        this.employeeService.delete(id);
         return "redirect:/";
     }
 
