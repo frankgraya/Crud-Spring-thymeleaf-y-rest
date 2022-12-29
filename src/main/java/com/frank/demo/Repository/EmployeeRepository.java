@@ -15,6 +15,4 @@ import org.springframework.stereotype.Repository;
 @Repository("EmployeeRepository")
 public interface EmployeeRepository extends JpaRepository<Employee, Long> {
 
-//    public abstract Employee findByName(String name);
-//    @Query("SELECT u FROM User ")
 }

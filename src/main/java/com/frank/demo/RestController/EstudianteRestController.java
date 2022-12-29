@@ -13,14 +13,20 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- *
+
+ * Esta clase  expone un api llamada estudiante
+ * la cual se encuentra expuesta en
+ * @see "http://localhost:4000/Estudiante"
  * @author frank
  */
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
 public class EstudianteRestController {
 
-    // http://localhost:4000/Estudiante
+
+    /**
+     * pide de la api estudiante el estudiante numero 1
+     */
     @GetMapping("/Estudiante")
     public Estudiante getEstudiante() {
         return new Estudiante(1, "francisco", "granados");

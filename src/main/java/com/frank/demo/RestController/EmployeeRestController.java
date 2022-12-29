@@ -42,7 +42,6 @@ public class EmployeeRestController {
     @PutMapping("/employees/{id}")
     public Employee update(@RequestBody Employee employee, @PathVariable Integer id) {
         Employee employeeActual = employeeService.findById(id);
-
         employeeActual.setFirstName(employee.getFirstName());
         employeeActual.setLastName(employee.getLastName());
         employeeActual.setEmail(employee.getEmail());
