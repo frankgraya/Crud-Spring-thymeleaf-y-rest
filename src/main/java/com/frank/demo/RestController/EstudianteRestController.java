@@ -41,9 +41,9 @@ public class EstudianteRestController {
         return estudiantes;
     }
 
-    @GetMapping("{nombre}/{apellido}")
-    public Estudiante estudiantePathVariable(String nombre, String apellido) {
-        return new Estudiante(nombre, apellido);
-    }
+    //@GetMapping("{nombre}/{apellido}")
+    //public Estudiante estudiantePathVariable(String nombre, String apellido) {
+   //     return new Estudiante(nombre, apellido);
+   // }
 
 }

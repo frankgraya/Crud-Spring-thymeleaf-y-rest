@@ -38,8 +38,9 @@ public class Estudiante implements Serializable {
     @Column(name = "apellido")
     private String apellido;
 
-    public Estudiante(String nombre, String apellido) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+  //  public Estudiante(String nombre, String apellido) {
+    //    throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    //}
+    //}
 
 }
