@@ -4,21 +4,21 @@
  */
 package com.frank.demo.Service;
 
-import com.frank.demo.Model.Employee;
+import com.frank.demo.Model.Usuario;
 import java.util.List;
 
 /**
  *
  * @author frank
  */
-public interface EmployeeService {
+public interface UsuarioService {
 
-    public Employee saveEmployee(Employee employee);
+    public Usuario saveUsuario(Usuario Usuario);
 
     public void delete(long id);
 
-    public Employee findById(long id);
+    public Usuario findById(long id);
 
-    public List<Employee> findAll();
+    public List<Usuario> findAll();
 
 }

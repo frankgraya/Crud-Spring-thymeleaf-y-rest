@@ -4,7 +4,7 @@
  */
 package com.frank.demo.Repository;
 
-import com.frank.demo.Model.Employee;
+import com.frank.demo.Model.Usuario;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -12,9 +12,8 @@ import org.springframework.stereotype.Repository;
  *
  * @author frank
  */
-@Repository("EmployeeRepository")
-public interface EmployeeRepository extends JpaRepository<Employee, Long> {
+@Repository
+public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
 
-//    public abstract Employee findByName(String name);
-//    @Query("SELECT u FROM User ")
+
 }

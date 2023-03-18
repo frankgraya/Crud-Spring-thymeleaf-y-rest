@@ -10,11 +10,11 @@
 
     <body>
         <div class="container">
-            <h1>Administrador de personas</h1>
+            <h1>Administrador de usuario</h1>
             <hr>
-            <h2>Actualizar persona</h2>
+            <h2>Actualizar usuario</h2>
 
-            <form action="#" th:action="@{/saveEmployee}" th:object="${employee}" method="POST">
+            <form action="#" th:action="@{/saveUsuario}" th:object="${usuario}" method="POST">
 
                 <!-- Add hidden form field to handle update -->
                 <input type="hidden" th:field="*{id}" />
@@ -25,12 +25,12 @@
 
                 <input type="text" th:field="*{email}" class="form-control mb-4 col-4">
 
-                <button type="submit" class="btn btn-info col-2"> Update Employee</button>
+                <button type="submit" class="btn btn-info col-2"> Update usuario</button>
             </form>
 
             <hr>
 
-            <a th:href="@{/}"> regresar a la lista de personas</a>
+            <a th:href="@{/}"> regresar a la lista de usuario</a>
         </div>
     </body>
 

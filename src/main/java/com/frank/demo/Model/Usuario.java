@@ -23,22 +23,23 @@ import lombok.NoArgsConstructor;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "Empleado")
-public class Employee implements Serializable {
+@Table(name = "Usuario")
+public class Usuario implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-
-    @Column(name = "first_name")
-    private String firstName;
-
-    @Column(name = "last_name")
-    private String lastName;
-
-    @Column(name = "email")
-    private String email;
+    @Column(name = "nombre")
+    private String nombre;
+    @Column(name = "apellidoPaterno")
+    private String apellidoPaterno;
+    @Column(name = "apellidoMaterno")
+    private String apellidoMaterno;
+    @Column(name = "edad")
+    private int edad;
+    @Column(name = "correo")
+    private String correo;
 
 }

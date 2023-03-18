@@ -13,12 +13,13 @@
             <hr>
             <h2>guardar persona</h2>
 
-            <form action="#" th:action="@{/saveEmployee}" th:object="${employee}" method="POST">
-                <input type="text" th:field="*{firstName}" placeholder="Nombre" class="form-control mb-4 col-4">
+            <form action="#" th:action="@{/saveUsuario}" th:object="${usuario}" method="POST">
+                <input type="text" th:field="*{nombre}" placeholder="Nombre" class="form-control mb-4 col-4">
 
-                <input type="text" th:field="*{lastName}" placeholder="Apellidos" class="form-control mb-4 col-4">
-
-                <input type="text" th:field="*{email}" placeholder="Email" class="form-control mb-4 col-4">
+                <input type="text" th:field="*{apellidoPaterno}" placeholder="apellidoPaterno" class="form-control mb-4 col-4">
+                <input type="text" th:field="*{apellidoMaterno}" placeholder="apellidoMaterno" class="form-control mb-4 col-4">
+                <input type="number" th:field="*{edad}" placeholder="edad" class="form-control mb-4 col-4">
+                <input type="email" th:field="*{correo}" placeholder="Email" class="form-control mb-4 col-4">
 
                 <button type="submit" class="btn btn-info col-2"> Guardar persona</button>
             </form>
