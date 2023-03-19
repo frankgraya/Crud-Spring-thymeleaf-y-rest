@@ -1,31 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Validar Correo</title>
+    <meta charset="UTF-8">
+    <title>Validador de correo electrónico</title>
 </head>
 <body>
-<h1>Validar Correo</h1>
-<form>
-    <label for="email">Correo Electrónico:</label>
-    <input type="text" id="email" name="email">
-    <br>
-    <button type="button" onclick="validarCorreo()">Validar</button>
+<h1>Validador de correo electrónico</h1>
+<form method="post" th:action="@{/validar}">
+    <input type="text" name="email" placeholder="Introduce una dirección de correo electrónico">
+    <button type="submit">Validar</button>
 </form>
-<div id="resultado"></div>
-<script>
-		function validarCorreo() {
-			var email = document.getElementById("email").value;
-			fetch('/tuproyecto/validacorreo?email=' + email)
-				.then(response => response.json())
-				.then(data => {
-					var resultado = document.getElementById("resultado");
-					if (data.valido) {
-						resultado.innerHTML = "La dirección de correo es válida.";
-					} else {
-						resultado.innerHTML = "La dirección de correo no es válida.";
-					}
-				});
-		}
-	</script>
+<p th:if="${mensaje != null}" th:text="${mensaje}"></p>
 </body>
 </html>

@@ -11,16 +11,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class FrankcrudspringthymeleafApplication {
 
-    @Value("${spring.application.name}")
-    private String name;
-
     public static void main(String[] args) {
         SpringApplication.run(FrankcrudspringthymeleafApplication.class, args);
     }
 
-    @RequestMapping(value = "/api", method = RequestMethod.GET)
-    public String name() {
-        return name;
-    }
 
 }

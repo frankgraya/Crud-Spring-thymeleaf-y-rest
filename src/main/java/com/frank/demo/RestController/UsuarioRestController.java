@@ -33,13 +33,15 @@ public class UsuarioRestController {
         return UsuarioService.findById(id);
     }
 
-    @PutMapping("/Usuarios/{id}")
+    @PutMapping("/registraUsuario/{id}")
     public Usuario update(@RequestBody Usuario Usuario, @PathVariable Integer id) {
         Usuario UsuarioActual = UsuarioService.findById(id);
 
-        UsuarioActual.setFirstName(Usuario.getFirstName());
-        UsuarioActual.setLastName(Usuario.getLastName());
-        UsuarioActual.setEmail(Usuario.getEmail());
+        UsuarioActual.setNombre(Usuario.getNombre());
+        UsuarioActual.setApellidoPaterno(Usuario.getApellidoPaterno());
+        UsuarioActual.setApellidoMaterno(Usuario.getApellidoMaterno());
+        UsuarioActual.setEdad(Usuario.getEdad());
+        UsuarioActual.setCorreo(Usuario.getCorreo());
         return UsuarioService.saveUsuario(UsuarioActual);
     }
 

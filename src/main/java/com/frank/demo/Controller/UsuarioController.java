@@ -34,7 +34,7 @@ public class UsuarioController {
     public String showNewUsuarioForm(Model model) {
         Usuario Usuario = new Usuario();
         model.addAttribute("Usuario", Usuario);
-        return "new_Usuario";
+        return "new_usuario";
     }
 
     @PostMapping("/saveUsuario")
@@ -46,13 +46,9 @@ public class UsuarioController {
 
     @GetMapping("/showFormForUpdate/{id}")
     public String showFormForUpdate(@PathVariable(value = "id") long id, Model model) {
-
-        // get Usuario from the service
         Usuario Usuario = UsuarioService.findById(id);
-
-        // set Usuario as a model attribute to pre-populate the form
         model.addAttribute("Usuario", Usuario);
-        return "update_Usuario";
+        return "update_usuario";
     }
 
     @GetMapping("/deleteUsuario/{id}")

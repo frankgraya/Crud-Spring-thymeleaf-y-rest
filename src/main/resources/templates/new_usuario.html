@@ -13,7 +13,7 @@
             <hr>
             <h2>guardar persona</h2>
 
-            <form action="#" th:action="@{/saveUsuario}" th:object="${usuario}" method="POST">
+            <form action="#" th:action="@{/saveUsuario}" th:object="${Usuario}" method="POST">
                 <input type="text" th:field="*{nombre}" placeholder="Nombre" class="form-control mb-4 col-4">
 
                 <input type="text" th:field="*{apellidoPaterno}" placeholder="apellidoPaterno" class="form-control mb-4 col-4">
